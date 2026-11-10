@@ -1,0 +1,28 @@
+test_baseline_20s_sample_count (test_hybrid_engine.EngineTests.test_baseline_20s_sample_count) ... ok
+test_invalid_samples_fail_stop (test_hybrid_engine.EngineTests.test_invalid_samples_fail_stop) ... ok
+test_no_arm_before_baselines (test_hybrid_engine.EngineTests.test_no_arm_before_baselines) ... ok
+test_no_signal_stop_and_latch (test_hybrid_engine.EngineTests.test_no_signal_stop_and_latch) ... ok
+test_original_eog_gate_hold_release_cooldown (test_hybrid_engine.EngineTests.test_original_eog_gate_hold_release_cooldown) ... ok
+test_original_ssvep_5s_nonoverlap_timing (test_hybrid_engine.EngineTests.test_original_ssvep_5s_nonoverlap_timing) ... ok
+test_original_ssvep_gate_hold_and_lockout (test_hybrid_engine.EngineTests.test_original_ssvep_gate_hold_and_lockout) ... ok
+test_stop_disarms_both_original_gates (test_hybrid_engine.EngineTests.test_stop_disarms_both_original_gates) ... ok
+test_30_20_20_baseline_then_original_two_ssvep_commands (test_hybrid_engine.FullSyntheticFlowTests.test_30_20_20_baseline_then_original_two_ssvep_commands)
+All three original baselines and both SSVEP outputs, synthetic only. ... ok
+test_eog_w_active_blocks_new_ssvep_left_command (test_interlock.IntegrationInterlockTests.test_eog_w_active_blocks_new_ssvep_left_command) ... ok
+test_keyboard_is_disabled_by_default_and_nonwindows_no_io (test_interlock.IntegrationInterlockTests.test_keyboard_is_disabled_by_default_and_nonwindows_no_io) ... ok
+test_ssvep_active_blocks_new_eog_blink_command (test_interlock.IntegrationInterlockTests.test_ssvep_active_blocks_new_eog_blink_command) ... ok
+test_artifact_rejection_method_identical (test_preserve_original.OriginalCodePreservationTests.test_artifact_rejection_method_identical) ... ok
+test_frequency_mapping_original (test_preserve_original.OriginalCodePreservationTests.test_frequency_mapping_original) ... ok
+test_original_eog_classifiers_filters_gates_identical (test_preserve_original.OriginalCodePreservationTests.test_original_eog_classifiers_filters_gates_identical) ... ok
+test_original_eog_signal_functions_identical (test_preserve_original.OriginalCodePreservationTests.test_original_eog_signal_functions_identical) ... ok
+test_original_ssvep_processors_detectors_gates_identical (test_preserve_original.OriginalCodePreservationTests.test_original_ssvep_processors_detectors_gates_identical) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.825s
+
+OK
+
+Environment: local build Python 3.13, NumPy/SciPy installed.
+Qt/PyQtGraph/BrainFlow UI and actual OpenBCI Ganglion hardware NOT exercised.
+AST comparisons compare the exact original function/class definitions to copied modules.
+Synthetic testing is not clinical validation or real-world safety certification.
