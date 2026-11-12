@@ -1,0 +1,2 @@
+-r requirements.txt
+brainflow>=5.0,<6.0
