@@ -73,7 +73,7 @@ class MonitorPage(QWidget):
         for hz in TARGET_FREQUENCIES:
             meter = QProgressBar()
             meter.setRange(0, 100)
-            meter.setFormat(f'{hz} Hz   —')
+            meter.setFormat(f'{hz} Hz')
             tele.layout_box.addWidget(meter)
             self.levels[hz] = meter
         self.details=label('EOG classifier: —\nPSDA: —\nEpochs: 0','muted',True)

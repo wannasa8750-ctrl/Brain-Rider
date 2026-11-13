@@ -28,7 +28,7 @@ class HybridMainWindow(QMainWindow):
     def __init__(self,args):
         super().__init__()
         self.args=args
-        self.setWindowTitle('LightBrain  /  Hybrid BCI Workspace')
+        self.setWindowTitle('BrainRider  /  Hybrid BCI Workspace')
         self.resize(1530,940)
         self.setMinimumSize(990,690)
         self.setStyleSheet(QSS)
@@ -62,7 +62,7 @@ class HybridMainWindow(QMainWindow):
         side=QFrame();side.setObjectName('sideBar');side.setFixedWidth(232)
         side_l=QVBoxLayout(side)
         side_l.setContentsMargins(18,23,18,22);side_l.setSpacing(12)
-        side_l.addWidget(label('◈  Brain Rider','brand'))
+        side_l.addWidget(label('◈  BrainRider','brand'))
         side_l.addWidget(label('HYBRID BCI SYSTEM','smallBrand'))
         side_l.addSpacing(28)
         side_l.addWidget(label('WORKSPACE','eyebrow'))
@@ -91,7 +91,6 @@ class HybridMainWindow(QMainWindow):
         right_l=QVBoxLayout(right)
         right_l.setContentsMargins(21,14,21,11);right_l.setSpacing(10)
         header=QHBoxLayout();header.setSpacing(12)
-        header.addWidget(label('NEURAL CONTROL PLATFORM','eyebrow')) 
         header.addStretch()
         self.connection=label('Waiting for signal source','muted')
         self.connection.setMaximumWidth(540)
