@@ -1,5 +1,6 @@
 """Sequential baseline acquisition, original durations, and validation controls."""
-from PyQt5.QtWidgets import QWidget,QVBoxLayout,QHBoxLayout,QGridLayout,QComboBox,QProgressBar
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QComboBox, QProgressBar
+from PyQt5.QtCore import QLocale
 from ui.components.common import Panel,StepCard,label,button
 from ui.components.signal_chart import SignalChart
 from ui.styles.theme import MINT,CYAN,PURPLE
@@ -24,7 +25,11 @@ class CalibrationPage(QWidget):
             left.addWidget(step)
             self.steps[kind]=step
         prog=Panel('Recording progress')
-        self.progress=QProgressBar();self.progress.setRange(0,100);prog.layout_box.addWidget(self.progress)
+        self.progress = QProgressBar()
+        self.progress.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
+        self.progress.setRange(0, 100)
+        self.progress.setFormat("%p%")
+        prog.layout_box.addWidget(self.progress)
         self.progress_label=label('Waiting for calibration','muted');prog.layout_box.addWidget(self.progress_label)
         left.addWidget(prog)
         left.addStretch()
